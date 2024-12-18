@@ -59,7 +59,7 @@ def process_caption(text, words_to_remove, regex_patterns):
         text = re.sub(r'\[YTS\.\w+\]', 'YTS', text, re.IGNORECASE)
 
     if yts_website_replace:
-        text = re.sub(r'\[@ADrama_Lovers\.\w+\]', '@ADrama_Lovers', text, re.IGNORECASE)
+        text = re.sub(r'\[@UmeshGang\.\w+\]', '@UmeshGang', text, re.IGNORECASE)
     
     if separator_space:
         if ' ' not in text:
