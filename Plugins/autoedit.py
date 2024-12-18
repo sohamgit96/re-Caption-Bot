@@ -55,8 +55,11 @@ def process_caption(text, words_to_remove, regex_patterns):
         # Capture the middle section of the link and add it before the file extension
         text = re.sub(r'www\.(.*?)\..*?( - |\.)(.*?)(\.mkv|\.mp4|\.avi)', r'\3 - \1\4', text, flags=re.IGNORECASE)
     
-    if yts_website_replace:
+    #if yts_website_replace:
         text = re.sub(r'\[YTS\.\w+\]', 'YTS', text, re.IGNORECASE)
+
+    if yts_website_replace:
+        text = re.sub(r'\[@ADrama_Lovers\.\w+\]', '@ADrama_Lovers', text, re.IGNORECASE)
     
     if separator_space:
         if ' ' not in text:
